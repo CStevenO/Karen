@@ -366,6 +366,7 @@ function AddNote(name) {
       loading--;},false);
       audio.src = "Sounds/" + name + ".mp3";
       audios.push(audio);
+
 }
 
 function Sound1()
@@ -400,3 +401,9 @@ function Sound4()
 	audios[3].pause();
    audios[3].play();
 }
+audio.addEventListener('ended', function () {
+	audios[0].pause();
+	audios[1].pause();
+	audios[2].pause();
+	audios[3].pause();
+ }, false);
