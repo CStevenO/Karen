@@ -361,7 +361,7 @@ AddNote("4");
 function AddNote(name) {
    loading++;
    var audio = document.createElement("audio");
-   audio.loop = true;
+   audio.loop = false;
    audio.addEventListener("canplaythrough", function () {
       loading--;},false);
       audio.src = "Sounds/" + name + ".mp3";
